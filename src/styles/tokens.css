@@ -293,3 +293,28 @@ div.sppb-addon-title.h1-visual-heading {
 }
 
 .offcanvas-menu .offcanvas-inner ul.menu ul.nav-child a, .offcanvas-menu .offcanvas-inner ul.menu li a { min-height: 28px !important; padding-top: 6px !important; padding-bottom: 6px !important; display: inline-flex !important; align-items: center !important; }
+
+
+#n2-ss-2, #n2-ss-2 .n2-ss-slider-1, #n2-ss-2 .n2-ss-slider-2, #n2-ss-2 .n2-ss-slider-3 {
+  min-height: 620px !important;
+}
+@media (max-width: 767px) {
+  #n2-ss-2, #n2-ss-2 .n2-ss-slider-1, #n2-ss-2 .n2-ss-slider-2, #n2-ss-2 .n2-ss-slider-3 {
+    min-height: 440px !important;
+  }
+}
+#n2-ss-2 .n2-ss-static-slide, #n2-ss-2 .n2-ss-layers-container {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+#n2-ss-2 .n2-ss-static-slide *, #n2-ss-2 .n2-ss-layer-row-inner, #n2-ss-2 .n2-ss-layer-row-inner * {
+  visibility: visible !important;
+}
+.wtvc-hero-slider-slides {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 1 !important;
+  overflow: hidden !important;
+}
