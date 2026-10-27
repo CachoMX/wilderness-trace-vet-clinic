@@ -1,0 +1,63 @@
+#eb .eb-post-simple {
+  border: 2px solid #e6eaf4;
+  padding: 20px;
+}
+
+
+#eb .eb-post-simple__title {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28px;
+  color: #0538c3;
+  font-family: Anton;
+}
+
+#eb .btn-default {
+  color: #fff !important;
+  background-color: #0538c3 !important;
+  border-color: #0538c3 !important;
+}
+
+#eb .btn-default:hover {
+  color: #fff !important;
+  background-color: #0538c3 !important;
+  border-color: #0538c3 !important;
+}
+
+#eb .btn-default:active {
+  color: #fff !important;
+  background-color: #0538c3 !important;
+  border-color: #0538c3 !important;
+}
+
+
+#eb .btn {
+  border-radius: 0px;
+}
+
+
+#eb .reset-heading {
+  font-size: 42px;
+  color: #0538c3
+}
+
+#fd .rounded-l-md {
+  border-bottom-left-radius: 0px;
+}
+
+#fd .rounded-l-md, #fd .rounded-t-md {
+  border-top-left-radius: 0px;
+}
+
+#fd .rounded-r-md {
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+
+#eb .form-control {
+  border: none;
+  border-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}

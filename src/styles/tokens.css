@@ -1,0 +1,256 @@
+:root {
+  /* Brand Colors */
+  --color-primary: #0538c3;
+  --color-primary-hover: #4a13d6;
+  --color-secondary: #3366FF;
+  --color-accent: #4a13d6;
+  --color-accent-green: #2BB673;
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #e6eaf4;
+  --color-bg-tertiary: #f2f4fa;
+  --color-bg-dark: #15141a;
+  --color-bg-footer: #0538c3;
+  --color-text-primary: #1a1a1a;
+  --color-text-secondary: #333333;
+  --color-text-muted: #555555;
+  --color-text-inverse: #ffffff;
+  --color-border: #d9e0f2;
+
+  /* Typography */
+  --font-heading: 'Anton', sans-serif;
+  --font-body: 'Poppins', sans-serif;
+
+  /* Fluid Type Scale */
+  --text-xs: clamp(0.75rem, 0.72rem + 0.15vw, 0.85rem);
+  --text-sm: clamp(0.875rem, 0.84rem + 0.18vw, 0.95rem);
+  --text-base: clamp(1rem, 0.96rem + 0.2vw, 1.125rem);
+  --text-lg: clamp(1.125rem, 1.05rem + 0.35vw, 1.35rem);
+  --text-xl: clamp(1.35rem, 1.2rem + 0.6vw, 1.75rem);
+  --text-2xl: clamp(1.75rem, 1.45rem + 1.1vw, 2.25rem);
+  --text-3xl: clamp(2.15rem, 1.75rem + 1.6vw, 2.75rem);
+  --text-4xl: clamp(2.5rem, 2rem + 2vw, 3.25rem);
+
+  /* Spacing & Layout */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --container-max: 1320px;
+
+  /* Radii & Shadows */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 15px;
+  --radius-pill: 50px;
+  --shadow-sm: 0 2px 8px rgba(5, 56, 195, 0.08);
+  --shadow-md: 0 8px 24px rgba(5, 56, 195, 0.12);
+  --shadow-lg: 0 16px 40px rgba(5, 56, 195, 0.18);
+
+  /* Motion */
+  --ease-out-quart: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-fast: 180ms;
+  --duration-normal: 250ms;
+  --duration-reveal: 500ms;
+}
+
+/* Preserve exact visual styling when semantic heading level is adjusted for 1-H1 rule */
+.eb-page-header div.h1-visual-heading {
+  font-family: var(--font-heading);
+  font-size: 50px;
+  font-weight: 400;
+  color: #FFFFFF;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+/* Lightweight CSS-first scroll reveal & micro-interactions (design-spec.md §11a) */
+@media (prefers-reduced-motion: no-preference) {
+  .sppb-btn,
+  .n2-style-6b1ad09ddff4ee5d41dc5949b145c6db-heading,
+  .wtvc-btn-submit {
+    transition: transform var(--duration-fast) var(--ease-out-quart),
+                background-color var(--duration-normal) ease,
+                box-shadow var(--duration-normal) ease;
+  }
+  .sppb-btn:hover,
+  .wtvc-btn-submit:hover {
+    transform: translateY(-2px);
+  }
+  .wtvc-reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity var(--duration-reveal) var(--ease-out-quart),
+                transform var(--duration-reveal) var(--ease-out-quart);
+  }
+  .wtvc-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .wtvc-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* Accessible skip link */
+.skip-to-main-link {
+  position: absolute;
+  top: -100px;
+  left: 16px;
+  background: var(--color-primary);
+  color: #ffffff;
+  padding: 10px 18px;
+  border-radius: var(--radius-md);
+  font-family: var(--font-body);
+  font-weight: 600;
+  z-index: 10000;
+  text-decoration: none;
+}
+.skip-to-main-link:focus {
+  top: 16px;
+  outline: 3px solid #ffffff;
+}
+
+/* Contact Form Section on /contact */
+.wtvc-contact-form-section {
+  padding: 60px 0 80px;
+  background-color: var(--color-bg-secondary);
+}
+.wtvc-contact-form-card {
+  max-width: 860px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: 44px 48px;
+  border-top: 6px solid var(--color-primary);
+}
+@media (max-width: 767px) {
+  .wtvc-contact-form-card {
+    padding: 28px 20px;
+  }
+}
+.wtvc-contact-form-card h2 {
+  font-family: var(--font-heading);
+  color: var(--color-primary);
+  font-size: 36px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+.wtvc-contact-form-card p.wtvc-form-subtitle {
+  text-align: center;
+  color: var(--color-text-secondary);
+  margin-bottom: 28px;
+  font-size: 16px;
+}
+.wtvc-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+@media (max-width: 767px) {
+  .wtvc-form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.wtvc-form-group {
+  display: flex;
+  flex-direction: column;
+}
+.wtvc-form-group.full-width {
+  grid-column: 1 / -1;
+}
+.wtvc-form-group label {
+  font-weight: 600;
+  color: #15141a;
+  margin-bottom: 6px;
+  font-size: 15px;
+}
+.wtvc-form-group input,
+.wtvc-form-group select,
+.wtvc-form-group textarea {
+  font-family: var(--font-body);
+  font-size: 16px;
+  padding: 12px 16px;
+  border: 1.5px solid #cbd5e1;
+  border-radius: var(--radius-md);
+  background: #f8fafc;
+  color: #15141a;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.wtvc-form-group input:focus,
+.wtvc-form-group select:focus,
+.wtvc-form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(5, 56, 195, 0.18);
+}
+.wtvc-btn-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: var(--color-primary);
+  color: #ffffff;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 17px;
+  padding: 14px 36px;
+  border: none;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  margin-top: 12px;
+}
+.wtvc-btn-submit:hover {
+  background-color: var(--color-primary-hover);
+}
+.wtvc-honeypot {
+  position: absolute !important;
+  left: -9999px !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+}
+
+/* Pure CSS + Vanilla JS Hero Slider Replacement for Zero-Bloat 1:1 Fidelity */
+.wtvc-hero-slider-slides {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+}
+.wtvc-hero-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 900ms ease-in-out;
+}
+.wtvc-hero-slide.is-active {
+  opacity: 1;
+}
+.wtvc-hero-slide picture,
+.wtvc-hero-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 100%;
+  display: block;
+}
