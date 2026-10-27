@@ -254,3 +254,14 @@
   object-position: 50% 100%;
   display: block;
 }
+
+/* Preserve exact visual styling for blog top banner when changed from h1 to div for single-H1 SEO rule */
+div.sppb-addon-title.h1-visual-heading {
+  font-family: var(--font-heading);
+  font-size: 50px;
+  font-weight: 400;
+  color: #FFFFFF;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 0;
+}
