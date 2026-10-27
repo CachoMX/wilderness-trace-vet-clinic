@@ -280,3 +280,14 @@ div.sppb-addon-title.h1-visual-heading {
   padding-top: 4px !important;
   padding-bottom: 4px !important;
 }
+
+
+#sp-bottom .sppb-addon-text, #sp-bottom .sppb-addon-text a, #sp-bottom .sppb-addon-title { color: #FFFFFF !important; }
+.sp-megamenu-parent .sp-dropdown li.sp-menu-item > a, .sp-megamenu-parent > li > a {
+  min-height: 28px !important;
+  line-height: 24px !important;
+  padding-top: 6px !important;
+  padding-bottom: 6px !important;
+  margin-top: 2px !important;
+  margin-bottom: 2px !important;
+}
