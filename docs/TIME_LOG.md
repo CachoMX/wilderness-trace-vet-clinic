@@ -1,0 +1,11 @@
+# Time Log — Wilderness Trace Veterinary Clinic (`wilderness-trace`)
+
+**Monday Task:** `AI Build Process Test: Grok, rebuild from existing site` (Item ID: `11906963038`)
+
+| Monday Subitem | Subitem ID | Start Time (CDT) | End Time (CDT) | Elapsed Duration | Decimal Hours | Deliverable Summary |
+|---|---|---|---|---|---|---|
+| **1. Design** | `11906954614` | `08:41:00 CDT` (paused `08:49:00–08:51:39 CDT`) | `08:52:29 CDT` | **`08m 50s`** (`530s`) | `0.15 hrs` | Full crawl of all 35 live URLs (`https://www.wildernesstracevetclinic.com/`), asset download (69 images, CSS, self-hosted fonts), `INVENTORY.md`, and `DESIGN_BRIEF.md`. |
+| **2. Build** | `11906966603` | `08:52:29 CDT` | `09:01:15 CDT` | **`08m 46s`** (`526s`) | `0.15 hrs` | Astro 5 static site generation for all 35 original routes + `/thank-you` + `/404` (37 total routes), `/api/contact` Serverless Function (Resend `process.env.RESEND_API_KEY`), `/sitemap.xml`, `/robots.txt`, GitHub push (`CachoMX/wilderness-trace-vet-clinic`), and Vercel production deployment (`https://wilderness-trace-vet-clinic.vercel.app`). |
+| **3. QA** | `11906970492` | `09:01:15 CDT` | `09:36:51 CDT` | **`35m 36s`** (`2,136s`) | `0.59 hrs` | Automated 37-page HTTP status & link audit (0 broken links), JSON-LD & canonical validation, WCAG AA contrast & ARIA fixes, mobile hero WebP & critical CSS inlining, Lighthouse Mobile suite (Performance 97–99, Accessibility 96, Best Practices 96, SEO 100), and `QA_REPORT.md`. |
+| **4. QC** | `11906961992` | `09:36:51 CDT` (resumed after `09:41:00–09:47:30 CDT` pause) | `09:54:21 CDT` | **`11m 00s`** (`660s` active; `17m 30s` wall-clock) | `0.18 hrs` (`0.29 hrs` wall-clock) | Visual 1:1 screenshot comparison against live site across Desktop & Mobile viewports, SmartSlider3 static full-width (`ss3-force-full-width`) & `#sp-cookie-consent` CSS parity fix, 35-route NAP/H1/H2/image parity audit (100% pass), post-fix Lighthouse Mobile verification, and `QC_SCORE_SHEET.md` (**150 / 150**). |
+| **TOTAL** | — | `08:41:00 CDT` | `09:54:21 CDT` | **`1h 04m 12s` active** (`1h 13m 21s` wall-clock) | **`1.07 hrs` active** (`1.22 hrs` wall-clock) | Complete 1:1 static Astro 5 rebuild deployed & verified on Vercel + GitHub. |
