@@ -267,3 +267,16 @@ div.sppb-addon-title.h1-visual-heading {
 }
 
 .sr-only { position: absolute !important; width: 1px !important; height: 1px !important; padding: 0 !important; margin: -1px !important; overflow: hidden !important; clip: rect(0, 0, 0, 0) !important; white-space: nowrap !important; border: 0 !important; }
+
+
+/* Blog & Mobile Touch Target Accessibility Polish */
+#eb .eb-meta-date, #eb .eb-post-hits, #eb .mod-muted, #eb .mod-cell, #eb .eb-post-meta, #eb .eb-post-meta a, #eb .eb-entry-meta, #eb .eb-entry-meta a {
+  color: #555555 !important;
+}
+.sp-megamenu-parent > li > a, .offcanvas-menu .offcanvas-inner ul.menu > li > a, .offcanvas-menu .offcanvas-inner ul.menu > li > span {
+  min-height: 28px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  padding-top: 4px !important;
+  padding-bottom: 4px !important;
+}
