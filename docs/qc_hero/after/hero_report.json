@@ -1,0 +1,34 @@
+{
+ "base": "https://wilderness-trace-vet-clinic-ame0omkio-cachomxs-projects.vercel.app",
+ "source": "https://www.wildernesstracevetclinic.com",
+ "pages": 35,
+ "fail": 0,
+ "warn": 3,
+ "failures": [],
+ "warnings": [
+  {
+   "profile": "mobile-390x664",
+   "path": "/",
+   "check": "source-match",
+   "level": "WARN",
+   "ours": "border-collie-outdoor-at-green-grass.webp",
+   "source": "border-collie-outdoor-at-green-grass.jpg"
+  },
+  {
+   "profile": "desktop-1366x800",
+   "path": "/",
+   "check": "template-match",
+   "level": "WARN",
+   "ours": "section@750",
+   "common": "section.sppb-section.sppb-section-content-bottom@450"
+  },
+  {
+   "profile": "mobile-390x664",
+   "path": "/",
+   "check": "template-match",
+   "level": "WARN",
+   "ours": "section@500",
+   "common": "section.sppb-section.sppb-section-content-bottom@300"
+  }
+ ]
+}
