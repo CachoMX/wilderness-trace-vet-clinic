@@ -7,7 +7,7 @@ export const CONSENT_KEY = 'wt-consent';
 export const CONSENT_DAYS = 180;
 
 const HEAD = `<script is:inline>(function(){var K='${CONSENT_KEY}',D=${CONSENT_DAYS},el=document.documentElement,c=null;
-try{c=JSON.parse(localStorage.getItem(K)||'null')}catch(e){}
+try{c=JSON.parse(localStorage.getItem(K)||'null')}catch(e){if(localStorage.getItem(K)){try{localStorage.removeItem(K)}catch(x){}}c=null}
 if(c&&(!c.choice||!c.ts||(Date.now()-c.ts)/864e5>D)){try{localStorage.removeItem(K)}catch(e){}c=null}
 function apply(v){if(v){el.setAttribute('data-consent',v)}else{el.removeAttribute('data-consent')}}
 apply(c&&c.choice);
